@@ -1,0 +1,4 @@
+C:\projetos\VISUALSTUDIO\a\Weba2mvc\obj\Debug\netcoreapp2.1\Weba2mvc.csprojAssemblyReference.cache
+C:\projetos\VISUALSTUDIO\a\Weba2mvc\obj\Debug\netcoreapp2.1\Weba2mvc.csproj.CoreCompileInputs.cache
+C:\projetos\VISUALSTUDIO\a\Weba2mvc\obj\Debug\netcoreapp2.1\Weba2mvc.AssemblyInfoInputs.cache
+C:\projetos\VISUALSTUDIO\a\Weba2mvc\obj\Debug\netcoreapp2.1\Weba2mvc.AssemblyInfo.cs
