@@ -17,5 +17,9 @@ namespace Weba2mvc.Data
         public DbSet<Weba2mvc.Models.Pessoas> Pessoas { get; set; }
 
         public DbSet<Weba2mvc.Models.Pesquisa> Pesquisa { get; set; }
+
+        public DbSet<Weba2mvc.Models.Produtos> Produtos { get; set; }
+
+        public DbSet<Weba2mvc.Models.Fornecedor> Fornecedor { get; set; }
     }
 }
