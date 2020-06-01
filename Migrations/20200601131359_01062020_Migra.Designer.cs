@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Weba2mvc.Data;
 
 namespace Weba2mvc.Migrations
 {
     [DbContext(typeof(Weba2mvcContext))]
-    partial class Weba2mvcContextModelSnapshot : ModelSnapshot
+    [Migration("20200601131359_01062020_Migra")]
+    partial class _01062020_Migra
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -21,5 +21,7 @@ namespace Weba2mvc.Data
         public DbSet<Weba2mvc.Models.Produtos> Produtos { get; set; }
 
         public DbSet<Weba2mvc.Models.Fornecedor> Fornecedor { get; set; }
+
+        public DbSet<Weba2mvc.Models.Funcionario> Funcionario { get; set; }
     }
 }
