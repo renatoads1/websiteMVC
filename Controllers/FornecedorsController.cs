@@ -52,7 +52,9 @@ namespace Weba2mvc.Controllers
         // POST: Fornecedors/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //
         [HttpPost]
+        //anti csrf
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Cnpj")] Fornecedor fornecedor)
         {
@@ -60,6 +62,7 @@ namespace Weba2mvc.Controllers
             {
                 _context.Add(fornecedor);
                 await _context.SaveChangesAsync();
+                //retorna para a view index fornecedor
                 return RedirectToAction(nameof(Index));
             }
             return View(fornecedor);
