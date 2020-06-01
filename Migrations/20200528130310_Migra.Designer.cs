@@ -8,8 +8,8 @@ using Weba2mvc.Data;
 namespace Weba2mvc.Migrations
 {
     [DbContext(typeof(Weba2mvcContext))]
-    [Migration("20200520135327_Pesquisa")]
-    partial class Pesquisa
+    [Migration("20200528130310_Migra")]
+    partial class Migra
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -17,6 +17,23 @@ namespace Weba2mvc.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("Weba2mvc.Models.Fornecedor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cnpj")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Fornecedor");
+                });
 
             modelBuilder.Entity("Weba2mvc.Models.Pesquisa", b =>
                 {
@@ -59,6 +76,29 @@ namespace Weba2mvc.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Pessoas");
+                });
+
+            modelBuilder.Entity("Weba2mvc.Models.Produtos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cor")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Peso")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Validade")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Produtos");
                 });
 #pragma warning restore 612, 618
         }

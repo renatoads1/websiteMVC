@@ -26,8 +26,8 @@ namespace Weba2mvc.Controllers
 
         public IActionResult Privacy()
         {
-            //return RedirectToAction("abaut", "Home");
-            return View();
+            return RedirectToAction("abaut", "Home");
+            //return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
