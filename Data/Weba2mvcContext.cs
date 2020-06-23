@@ -14,14 +14,11 @@ namespace Weba2mvc.Data
         {
         }
 
-        public DbSet<Weba2mvc.Models.Pessoas> Pessoas { get; set; }
+        public DbSet<Department> Department { get; set; }
+        public DbSet<Saller> Saller { get; set; }
+        public DbSet<SalesRecord> SalesRecord { get; set; }
+        public DbSet<Product> Product { get; set; }
 
-        public DbSet<Weba2mvc.Models.Pesquisa> Pesquisa { get; set; }
 
-        public DbSet<Weba2mvc.Models.Produtos> Produtos { get; set; }
-
-        public DbSet<Weba2mvc.Models.Fornecedor> Fornecedor { get; set; }
-
-        public DbSet<Weba2mvc.Models.Funcionario> Funcionario { get; set; }
     }
 }
