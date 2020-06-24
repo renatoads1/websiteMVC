@@ -1,0 +1,73 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Weba2mvc.Models.Product;
+@{
+    ViewData["Title"] = "Delete";
+
+}
+<h2>@ViewData["Title"]</h2>
+<hr>
+<h3>Are You sure you want to Delete this?</h3>
+<div>
+    <h4>Produto</h4>
+    <hr/>
+    <div class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodBarras)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodBarras)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoCompra)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoCompra)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoVenda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoVenda)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeEstoque)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeEstoque)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataCadastro)
+        </dd>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="Submit" class="btn btn-danger" value="Delete" />
+            <a asp-action="Index" > Back to List</a>
+        </form>
+    </div>
+
+</div>
+
