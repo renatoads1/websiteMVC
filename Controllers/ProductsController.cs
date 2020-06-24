@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Weba2mvc.Models;
 using Weba2mvc.Services;
 namespace Weba2mvc.Controllers
@@ -26,14 +22,15 @@ namespace Weba2mvc.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Product obj) 
+        public IActionResult Create(Product product) 
         {
-            _productService.Insert(obj);
+            _productService.Insert(product);
             return RedirectToAction(nameof(Index));
         
         }
+
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -54,6 +51,20 @@ namespace Weba2mvc.Controllers
         {
             _productService.Remove(id);
             return RedirectToAction(nameof(Index));            
+        }
+
+        public IActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Product obj = _productService.FindById(id.Value);
+            if(obj==null)
+            {
+                return NotFound();
+            }
+            return View(obj);
         }
         
     }
